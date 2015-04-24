@@ -1,0 +1,35 @@
+.main-wrapper {
+  @include center($main-wrapper-width);
+  &.home-wrapper {
+    @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+  }
+  @include break-huge {
+    @include center(1080px);
+  }
+  @include break-large {
+    @include center(920px);
+  }
+  @include break-medium {
+    @include center(100%);
+  }
+}
+
+.page-content-container {
+  @include center(100%);
+  @include cf();
+}
+
+.footer-content {
+  @include center($main-wrapper-width);
+  padding: 30px 0;
+  @include break-huge {
+    @include center(1080px);
+  }
+  @include break-large {
+    @include center(920px);
+  }
+  @include break-medium {
+    @include center(100%);
+    padding: 30px 20px;
+  }
+}

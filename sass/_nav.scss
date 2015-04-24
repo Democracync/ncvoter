@@ -1,0 +1,170 @@
+.nav-wrapper {
+  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+  @include center(100%);
+  background-color: $blue;
+  height: 60px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  & a {
+    text-decoration: none;
+  }
+  & ul > li {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+}
+
+.page-nav-wrapper {
+  @include stack();
+}
+
+.main-nav-container {
+}
+
+.main-nav {
+  @include center($main-wrapper-width);
+  @include break-large {
+    display: none;
+    padding-top: 60px;
+  }
+}
+
+.main-nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  @include break-large {
+    background: $blue;
+    position: absolute;
+    top: 60px;
+    max-width: 920px;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+  & li {
+    @include span(1/8);
+    box-sizing: border-box;
+    display: inline;
+    text-align: center;
+    position: relative;
+    @include break-large {
+      width: 100%;
+      display: block;
+      background: $blue;
+      text-align: left;
+      border-bottom: 1px solid #fff;
+    }
+    &:hover {
+      background: #fff;
+      & a {
+        color: $blue;
+      }
+    }
+
+  }
+
+  & li a {
+    @include transition(all .3s ease);
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 60px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include break-huge {
+      font-size: .9rem;
+    }
+    @include break-large {
+      width: 100%;
+      display: block;
+      padding-left: 15px;
+    }
+    &:hover {
+      text-decoration: none;
+      @include break-large {
+        background-color: #fff;
+        color: $blue;
+      }
+    }
+  }
+}
+
+/* Dropdown menu */
+.main-nav ul li ul {
+  @include transition(all .3s ease);
+  @include box-shadow(0, 4px, 5px, rgba(0, 0, 0, 0.30));
+  padding: 0;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  display: none;
+  @include opacity(0);
+  visibility: hidden;
+
+  @include break-large {
+    display: block;
+    position: relative;
+    top: 0;
+    @include opacity(1);
+    visibility: visible;
+  }
+}
+
+.main-nav ul li ul li {
+  background: #fff;
+  box-sizing: border-box;
+  display: block;
+  min-width: 220px;
+  text-align: left;
+  padding: 0 10px 0 20px;
+  & a {
+    box-sizing: border-box;
+    @include break-large {
+      &:before {content: "- ";}
+    }
+  }
+  @include break-large {
+    background: $blue;
+    border: 0;
+  }
+}
+.main-nav ul li ul li:hover {
+  & a:hover {
+    text-decoration: underline;
+    @include break-large {
+      color: $blue;
+      }
+    }
+  }
+.main-nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  & a {
+    @include break-large {
+    color: #fff;
+    }
+  }
+}
+
+// All link font sizes made bigger for small screens:
+.main-nav ul li a, .main-nav ul li ul li a {
+  @include break-large {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Menu Toggle */
+a.show-menu {
+  line-height: 60px;
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  @include break-large {
+    display: block;
+    float: right;
+    color: $nav-link-color;
+    font-size: 2rem;
+    padding-right: 30px;
+  }
+}

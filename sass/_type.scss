@@ -1,0 +1,47 @@
+// Main text
+p, .page-main-content ul li, .page-main-content ol li {
+  font-size: 1.2rem;
+  @include break-small {
+    font-size: 1.2rem;
+  }
+}
+// Links
+.page-main-content a, .sidebar a {
+  color: $link-color;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px $link-color dotted;
+  //@include transition(color .5s ease);
+  &:hover {
+    background-color: lighten($yellow, 15%);
+    color: darken($link-color, 10);
+    border: 0;
+  }
+}
+ul > li {
+  margin-bottom: 7px;
+}
+
+ul.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-font-family;
+  font-weight: 500;
+}
+
+.page-main-content h1 {
+  color: $red;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+.page-main-content h2 {
+  color: $dark-blue;
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
