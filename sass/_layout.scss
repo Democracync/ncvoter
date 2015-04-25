@@ -1,7 +1,7 @@
 .main-wrapper {
   @include center($main-wrapper-width);
   &.home-wrapper {
-    @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+    @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30)); 
   }
   @include break-huge {
     @include center(1080px);

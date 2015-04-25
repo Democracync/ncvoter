@@ -32,31 +32,7 @@ in North Carolina!">
   </head>
   <body <?php body_class(); ?>>
 
-		<?php if ( !is_front_page() ){ ?>
-			<div class="page-head-wrapper">
-				<header class="page-header">
-					<h1 class="head-name">
-						<a href="index.html">NC VOTER (.ORG)</a>
-					</h1>
-
-					<div class="nav-toggle page-nav-toggle">
-						<a class="show-menu" onclick="Show_Div()"><span class="icon icon-menu"></span></a>
-					</div>
-
-					<div class="page-head-search">
-						<form action="">
-
-							<button type="submit"><span class="icon icon-search"></span></button>
-							<input onfocus="if(this.value == 'Search NCVoter.org') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search NCVoter.org'; }" type="text"type="text" value="Search NCVoter.org">
-						</form>
-					</div>
-
-				</header>
-
-			</div>
-			<?php } ?>
-
-			<section class="nav-wrapper <?php is ( !is_front_page() ) {echo "page-nav-wrapper"}?>">
+			<section class="nav-wrapper">
 
 	    <div class="nav-toggle">
 	      <a class="show-menu"><span class="icon icon-menu"></span></a>
