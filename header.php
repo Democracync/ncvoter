@@ -35,7 +35,7 @@ in North Carolina!">
 			<div class="page-head-wrapper">
 				<header class="page-header">
 					<h1 class="head-name">
-						<a href="index.html">NC VOTER (.ORG)</a>
+						<a href="<?php echo home_url(); ?>">NC VOTER (.ORG)</a>
 					</h1>
 
 					<div class="nav-toggle page-nav-toggle">
@@ -43,11 +43,7 @@ in North Carolina!">
 					</div>
 
 					<div class="page-head-search">
-						<form action="">
-
-							<button type="submit"><span class="icon icon-search"></span></button>
-							<input onfocus="if(this.value == 'Search NCVoter.org') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search NCVoter.org'; }" type="text"type="text" value="Search NCVoter.org">
-						</form>
+						<?php get_search_form( true ); ?>
 					</div>
 
 				</header>

@@ -22,7 +22,7 @@ ul > li {
   margin-bottom: 7px;
 }
 
-ul.unstyled {
+ul.unstyled, aside.widget ul {
   list-style-type: none;
   padding-left: 0;
 }
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-main-content h2 {
   color: $dark-blue;
   font-weight: normal;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin-top: 60px;
   margin-bottom: 0;
 }
