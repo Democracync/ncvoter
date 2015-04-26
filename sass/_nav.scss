@@ -25,8 +25,11 @@
   @include center($main-wrapper-width);
   @include break-large {
     display: none;
-    padding-top: 60px;
   }
+}
+
+.main-nav.show {
+  display: block;
 }
 
 .main-nav ul {

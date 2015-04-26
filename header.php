@@ -32,7 +32,6 @@ in North Carolina!">
   </head>
   <body <?php body_class(); ?>>
 
-		<?php if ( !is_front_page() ){ ?>
 			<div class="page-head-wrapper">
 				<header class="page-header">
 					<h1 class="head-name">
@@ -54,40 +53,11 @@ in North Carolina!">
 				</header>
 
 			</div>
-			<?php } ?>
 
-			<section class="nav-wrapper <?php is ( !is_front_page() ) {echo "page-nav-wrapper"}?>">
-
-	    <div class="nav-toggle">
-	      <a class="show-menu"><span class="icon icon-menu"></span></a>
-	    </div>
+			<section class="nav-wrapper page-nav-wrapper">
 
 	      <nav class="main-nav">
-	        <ul>
-						<li><a href="<?php echo get_site_url(); ?>">Home</a></li>
-						<li><a href="page.html">Who Can Vote?</a></li>
-						<li><a href="#">Registering</a>
-								<ul>
-									<li><a href="#">Registration FAQ</a></li>
-								</ul>
-							</li>
-						<li><a href="#">Voting</a>
-								<ul>
-									<li><a href="#">Your Ballot & Districts</a></li>
-									<li><a href="#">Offices on Your Ballot</a></li>
-									<li><a href="#">Absentee Ballots</a></li>
-									<li><a href="http://www.ncstudentvoter.com">Student Voters</a></li>
-								</ul>
-							</li>
-						<li><a href="#">Election Protection</a></li>
-						<li><a href="#">Do More</a>
-							<ul>
-								<li><a href="#">Resources</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Your Story</a></li>
-	        </ul>
+					<?php wp_nav_menu(array( 'menu' => 'main', 'menu_class' => 'main-nav', 'walker' => new My_Walker_Nav_Menu()) ); ?>
 	      </nav>
 
 		</section> <!-- end. nav-wrapper -->

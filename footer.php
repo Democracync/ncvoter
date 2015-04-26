@@ -13,7 +13,7 @@
 </footer>
 
 <!-- jQuery -->
-<script type="text/javascript" src="js/scripts.js"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/wp-content/themes/ncvoter2015/js/scripts.js"></script>
 </body>
 </html>

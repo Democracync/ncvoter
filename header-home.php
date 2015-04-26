@@ -1,16 +1,16 @@
 <?php
 /**
- * The Header. Displays all of the <head> section and everything up to the slider
- */
+* The Header. Displays all of the <head> section and everything up to the slider
+*/
 ?>
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<meta property="og:image" content="assets/img/ncvoterorg-og-img.jpg" />
 	<meta property="og:url" content="http://www.ncvoter.org">
@@ -20,8 +20,9 @@ in North Carolina!">
 
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<?php wp_enqueue_script("jquery"); ?>
-  <?php wp_head(); ?>
+	<!--<?php wp_enqueue_script("jquery"); ?>-->
+	<?php wp_head(); ?>
+	<!--<script type="text/javascript" src="<?php echo get_site_url(); ?>/wp-content/themes/ncvoter2015/js/scripts.js"></script>-->
 
 
 	<!--[if lt IE 9]>
@@ -29,41 +30,18 @@ in North Carolina!">
 	<link rel="stylesheet" type="text/css" href="http://www.democracy-nc.org/wp-content/themes/DemNCv1/ie8-and-down.css" />
 	<![endif]-->
 
-  </head>
-  <body <?php body_class(); ?>>
+	</head>
+	<body <?php body_class(); ?>>
+
 
 			<section class="nav-wrapper">
 
-	    <div class="nav-toggle">
-	      <a class="show-menu"><span class="icon icon-menu"></span></a>
-	    </div>
+			<div class="nav-toggle">
+				<a class="show-menu"><span class="icon icon-menu"></span></a>
+			</div>
 
-	      <nav class="main-nav">
-	        <ul>
-						<li><a href="<?php echo get_site_url(); ?>">Home</a></li>
-						<li><a href="page.html">Who Can Vote?</a></li>
-						<li><a href="#">Registering</a>
-								<ul>
-									<li><a href="#">Registration FAQ</a></li>
-								</ul>
-							</li>
-						<li><a href="#">Voting</a>
-								<ul>
-									<li><a href="#">Your Ballot & Districts</a></li>
-									<li><a href="#">Offices on Your Ballot</a></li>
-									<li><a href="#">Absentee Ballots</a></li>
-									<li><a href="http://www.ncstudentvoter.com">Student Voters</a></li>
-								</ul>
-							</li>
-						<li><a href="#">Election Protection</a></li>
-						<li><a href="#">Do More</a>
-							<ul>
-								<li><a href="#">Resources</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Your Story</a></li>
-	        </ul>
-	      </nav>
+				<nav class="main-nav">
+					<?php wp_nav_menu(array( 'menu' => 'main', 'menu_class' => 'main-nav', 'walker' => new My_Walker_Nav_Menu()) ); ?>
+				</nav>
 
 		</section> <!-- end. nav-wrapper -->
