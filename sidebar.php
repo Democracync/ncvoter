@@ -1,14 +1,11 @@
 <section class="sidebar">
-  <div class="sidebar-item">
-    <h3 class="sidebar-header">Quick Links</h3>
-    <ul class="unstyled">
-      <li><a href="#">One link</a></li>
-      <li><a href="#">One link</a></li>
-      <li><a href="#">One link</a></li>
-      <li><a href="#">One link</a></li>
-      <li><a href="#">One link</a></li>
+  <aside class="widget quick-links">
+    <h1 class="widget-title">Quick Links</h1>
+    <ul>
+      <li><a href="http://ncelectionconnection.com/registering-to-vote/voter-registration-faq/#three"><span class="icon icon-clipboard"></span> Check Your Registration</a></li>
+      <li><a href="http://www.ncelectionconnection.com/downloads/LocalElectionTerms.xls"><span class="icon icon-office"></span> Chart of NC City Elections</a></li>
     </ul>
-  </div>
+  </aside>
 
   <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar()) : endif; ?>
 

@@ -41,3 +41,21 @@ section.sidebar {
     margin-bottom: 10px;
   }
 }
+
+.home-page-links ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.quick-links ul li a {
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  display: block;
+  & span.icon {
+    color: $red;
+  }
+  &:hover {
+    background: transparent;
+    color: darken($link-color, 10%);
+  }
+}

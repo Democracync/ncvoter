@@ -65,7 +65,7 @@ div.home-head-search {
   border: 2px solid #fff;
   width: 280px;
   @include break-small {
-    width: 200px;
+    width: 180px;
   }
 }
 
@@ -142,6 +142,7 @@ h1.head-name {
   }
 }
 
+
 .page-head-search form {
   @include break-medium {
     width: 300px;
@@ -150,7 +151,7 @@ h1.head-name {
   }
 }
 
-.page-head-search form > input[type="text"] {
+.page-head-search form > input[type="text"], .content-section-search form > input[type="text"] {
   @extend %head-search-text-input;
   border: 2px solid $light-gray;
   border-right: 0;
@@ -164,7 +165,7 @@ h1.head-name {
   }
 }
 
-.page-head-search form > input[type="submit"] {
+.page-head-search form > input[type="submit"], .content-section-search form > input[type="submit"]{
   @extend %head-search-button;
   float: left;
   border: 2px solid $green;

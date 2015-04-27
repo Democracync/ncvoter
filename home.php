@@ -18,14 +18,14 @@ get_header('home');
 
   </header>
 
-  <!-- Slider starts here ********************************** -->
+  <!-- Slider starts here **********************************
 
         <section class="slider">
   				<a href="#" class="slider-link">
   	        <h2 class="slider-head"><span>Official</span> 2014 Election Results</h2>
   	        <h3 class="slider-sub-head"><span>from the</span> State Board of Elections</h3>
   				</a>
-        </section> <!-- end .slider -->
+        </section> -->
 
   <!-- Section with 6 boxes starts here ********************************** -->
 
@@ -82,16 +82,19 @@ get_header('home');
         <section class="links-boxes-container">
 
           <div class="home-page-links">
+            <?php mylinkorder_list_bookmarks(); ?>
+          </div>
+
+          <div class="home-page-links quick-links">
             <h2 class="links-boxes-header">
               Quick Links
             </h2>
+            <ul>
+              <li><a href="http://ncelectionconnection.com/registering-to-vote/voter-registration-faq/#three"><span class="icon icon-clipboard"></span> Check Your Registration</a></li>
+              <li><a href="http://www.ncelectionconnection.com/downloads/LocalElectionTerms.xls"><span class="icon icon-office"></span> Chart of NC City Elections</a></li>
+            </ul>
           </div>
 
-          <div class="home-page-links">
-            <h2 class="links-boxes-header">
-              Useful Links
-            </h2>
-          </div>
         </section>
 
   		</div> <!-- end .main-wrapper -->
